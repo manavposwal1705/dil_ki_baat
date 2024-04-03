@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik+Scribble&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go Out With Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url("/akansha\ mam.jpg");
+            /* The image used */
+            background-color: #cccccc;
+            /* Used if the image is unavailable */
+            height: 100vh;
+            width: 100vw;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+
+        #invitation {
+            background-color: rgba(255, 255, 255, 0);
+            max-width: 600px;
+            margin: 40px auto;
+            margin-top: 0px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ffbede;
+            font-family: "Rubik Scribble", system-ui;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d13e85;
+        }
+
+        .heart {
+            /* position: absolute; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: heartBeat 1s infinite;
+            color: #ff69b4;
+            font-size: 100px;
+        }
+
+        h2,
+        p {
+            font-family: "Dancing Script", cursive;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 22px;
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="invitation">
+        <h1>Will You Go Out With Me?</h1>
+        <h2 style="color: #cccccc;">Dear akansha mam,</h2>
+        <p style="font-weight: bold; color: #cccccc; background-color: #fa6cb37b; border-radius: 30px;">Falling for you
+            was like an afternoon nap, promising only a brief slumber but as soon as I had fallen I was
+            already dreaming.
+            It would mean the world to me if you would join me for the freshers party and I hope you'll say yes.</p>
+        <p style="font-weight: bold; color: #cccccc;">Please let me know your answer.</p>
+        <button onclick="accept()">Yes</button>
+        <button onclick="reject()">No</button>
+        <div id="heart" class="heart">&#10084;</div>
+    </div>
+
+
+    <script>
+        function accept() {
+            document.getElementById("heart").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("heart").style.display = "none";
+                alert("Great! I can't wait for our date!");
+            }, 3000); // Adjust the timeout value as needed
+        }
+
+        function reject() {
+            alert("That's okay, maybe another time.");
+        }
+    </script>
+</body>
+
+</html>
